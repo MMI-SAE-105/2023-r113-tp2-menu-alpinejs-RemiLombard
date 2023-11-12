@@ -32,12 +32,12 @@
     <!-- header>h1{Test de menu} -->
     <header>
       <button 
-      aria-controls="mainNav" 
-      @click="menuIsOpen = ! menuIsOpen"
-      class="header_menuBtn"
+        aria-controls="mainNav" 
+        @click="menuIsOpen = ! menuIsOpen" 
+        class="header_menuBtn"
       >
-      Menu
-    </button>
+        Menu
+      </button>
       <h1>Test de menu</h1>
       <nav 
         id="mainNav" 
@@ -60,5 +60,19 @@
       nemo aliquid pariatur quam voluptates animi laudantium, aperiam
       consectetur nobis enim.
     </p>
+
+    <dl x-data="{ddIsOpen: false}">
+      <em><strong><u><dt @click="ddIsOpen = ! ddIsOpen">Lorem.</dt></u></strong></em>
+      <dd x-show="ddIsOpen">Lorem ipsum dolor sit amet.</dd>
+    </dl>
+    <dl x-data="{ddIsOpen: false}">
+      <em><strong><u><dt @click="ddIsOpen = ! ddIsOpen">Exercitationem.</dt></u></strong></em>
+      <dd x-show="ddIsOpen">Iusto culpa recusandae minima quidem.</dd>
+    </dl>
+    <dl x-data="{ddIsOpen: false}">
+      <em><strong><u><dt @click="ddIsOpen = ! ddIsOpen">Eos.</dt></u></strong></em>
+      <dd x-show="ddIsOpen">Eius veniam deleniti nostrum dolores.</dd>
+    </dl>
+
   </body>
 </html>
