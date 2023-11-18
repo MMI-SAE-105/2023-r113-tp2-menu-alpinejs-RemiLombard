@@ -30,8 +30,7 @@
     
   </head>
   <body>
-    <!-- https://emmet.io/ -->
-    <!-- header>h1{Test de menu} -->
+    
     <header>
       <button 
         aria-controls="mainNav" 
@@ -40,7 +39,7 @@
       >
         Menu
       </button>
-      <h1>Test de menu</h1>
+      <h1>Les animaux</h1>
       <nav 
         id="mainNav" 
         x-show="menuIsOpen" 
@@ -48,33 +47,20 @@
         class="menu"
       >
         <ul>
-          <li><a href="#">item 1</a></li>
-          <li><a href="#">item 2</a></li>
-          <li><a href="#">item 3</a></li>
+          <li><a href="../index.html">Accueil</a></li>
+          <li><a href="../cats/index.html">Les chats</a></li>
+            <ul>
+              <li><a href="../cats/chat-1.html">Chat 1</a></li>
+              <li><a href="../cats/chat-2.html">Chat 2</a></li>
+            </ul>
+          <li><a href="../dogs/index.html">Les chiens</a></li>
+            <ul>
+              <li><a href="/dogs/chien-1.html">Chien 1</a></li>
+              <li><a href="/dogs/chien-2.html">Chien 2</a></li>
+            </ul>
         </ul>
       </nav>
     </header>
-    <!-- h2>lorem2^p>lorem -->
-    <h2>Lorem, ipsum.</h2>
-    <p>
-      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Repellat
-      mollitia adipisci alias error laboriosam numquam incidunt magni eum eos
-      nemo aliquid pariatur quam voluptates animi laudantium, aperiam
-      consectetur nobis enim.
-    </p>
-
-    <dl x-data="{ddIsOpen: false}">
-      <em><strong><u><dt @click="ddIsOpen = ! ddIsOpen">Lorem.</dt></u></strong></em>
-      <dd x-show="ddIsOpen">Lorem ipsum dolor sit amet.</dd>
-    </dl>
-    <dl x-data="{ddIsOpen: false}">
-      <em><strong><u><dt @click="ddIsOpen = ! ddIsOpen">Exercitationem.</dt></u></strong></em>
-      <dd x-show="ddIsOpen">Iusto culpa recusandae minima quidem.</dd>
-    </dl>
-    <dl x-data="{ddIsOpen: false}">
-      <em><strong><u><dt @click="ddIsOpen = ! ddIsOpen">Eos.</dt></u></strong></em>
-      <dd x-show="ddIsOpen">Eius veniam deleniti nostrum dolores.</dd>
-    </dl>
 
   </body>
 </html>
