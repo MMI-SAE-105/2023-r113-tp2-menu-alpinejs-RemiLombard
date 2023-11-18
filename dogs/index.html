@@ -1,11 +1,67 @@
 <!DOCTYPE html>
-<html lang="fr">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Les chiens</title>
-</head>
-<body>
-    
-</body>
-</html>
+<html lang="fr" x-data="{menuIsOpen: false}" :class="{noscroll:menuIsOpen,}">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Les chiens</title>
+        <script defer src="https://unpkg.com/alpinejs"></script>
+
+        <style>
+            .menu {
+              position: fixed;
+              top: 0;
+              left: 0;
+              width: 100vw;
+              height: 100vh;
+              background: #fff;
+              display: grid;
+              place-content: center;
+            }
+            .header_menuBtn {
+              position: relative;
+              z-index: 10;
+            }
+            .noscroll,
+            .noscroll body {
+              overflow: hidden;
+            }
+          </style>
+
+    </head>
+    <body>
+
+        <header>
+            <button 
+              aria-controls="mainNav" 
+              @click="menuIsOpen = ! menuIsOpen" 
+              class="header_menuBtn"
+            >
+              Menu
+            </button>
+            <h1>Les chiens</h1>
+            <nav 
+              id="mainNav" 
+              x-show="menuIsOpen" 
+              x-transition.duration.800ms
+              class="menu"
+            >
+              <ul>
+                <li><a href="../index.html">Accueil</a></li>
+                <li><a href="../cats/index.html">Les chats</a></li>
+                  <ul>
+                    <li><a href="../cats/chat-1.html">Chat 1</a></li>
+                    <li><a href="../cats/chat-2.html">Chat 2</a></li>
+                  </ul>
+                <li><a href="../dogs/index.html">Les chiens</a></li>
+                  <ul>
+                    <li><a href="../dogs/chien-1.html">Chien 1</a></li>
+                    <li><a href="../dogs/chien-2.html">Chien 2</a></li>
+                  </ul>
+              </ul>
+            </nav>
+          </header>
+      
+            
+    </body>
+    </html>
